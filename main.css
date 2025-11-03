@@ -463,16 +463,12 @@ section {
 }
 
 @keyframes typing {
-    /* these breakpoints correspond to the word time windows; keep pauses so each word stays visible */
-    /* first word window (0-33%): type in early, pause, then erase before next */
-    0%, 5%, 28%, 33% { width: calc(100% + 8px); }  /* hidden (overlay covers text) */
-    8%, 25%           { width: 0; }                /* typed (overlay moved) */
+    0%, 5%, 28%, 33% { width: calc(100% + 8px); } 
+    8%, 25%           { width: 0; }
 
-    /* second word window (34-66%) */
     34%, 38%, 61%, 66% { width: calc(100% + 8px); }
     41%, 58%           { width: 0; }
 
-    /* third word window (67-100%) */
     67%, 71%, 94%, 100% { width: calc(100% + 8px); }
     74%, 91%            { width: 0; }
 }
