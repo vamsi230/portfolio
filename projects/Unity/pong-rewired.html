@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Rewired | Project Details</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --surface-color: #111111;
+            --accent-color: #00f2ff;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border-color: #222222;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .back-nav {
+            padding: 40px 0 0;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            padding: 40px 0 40px;
+            text-align: center;
+        }
+
+        .hero-media {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--surface-color);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .project-hook {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            background: var(--surface-color);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 48px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-color);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+            margin-left: 20px;
+        }
+
+        .overview-text {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 850px;
+        }
+
+        .list-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .list-item::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .screenshot-item {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--surface-color);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .screenshot-item:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+
+        .screenshot-item::after {
+            content: "";
+        }
+
+        .links-container {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 600px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            .quick-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="back-nav">
+            <a href="../../index.html#projects" class="back-link">← BACK TO PROJECTS</a>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-media">
+                <img src="../../gifs/PongGame.gif" alt="Pong Rewired Preview">
+            </div>
+            <h1 class="project-title">Pong Rewired</h1>
+            <p class="project-hook">Modernized Arcade Classic</p>
+        </header>
+
+        <div class="quick-info">
+            <div class="info-item">
+                <span class="info-label">Engine</span>
+                <span class="info-value">Unity</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Genre</span>
+                <span class="info-value">Arcade</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Role</span>
+                <span class="info-value">Solo Developer</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Timeline</span>
+                <span class="info-value">1 Week</span>
+            </div>
+        </div>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p class="overview-text">
+                A polished remake of Pong featuring enhanced visual effects, smooth UI transitions, and a challenging AI opponent.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <div class="list-container">
+                <div class="list-item">Advanced Unity implementation with a focus on performance and reliability.</div>
+                <div class="list-item">Modular software architecture designed for scalability and code reuse.</div>
+                <div class="list-item">High-fidelity player feedback and polished gameplay mechanics.</div>
+                <div class="list-item">Custom tools and data-driven systems for rapid iteration.</div>
+                <div class="list-item">Intuitive user interfaces and responsive input handling.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-item"><img src="../../Images/Unity/PingPong/PingPong_1.gif" alt="PingPong_Img"></div>
+                <div class="screenshot-item"><img src="../../Images/Unity/PingPong/PingPong_2.gif" alt="PingPong_Img"></div>
+                <div class="screenshot-item"><img src="../../Images/Unity/PingPong/PingPong_3.gif" alt="PingPong_Img"></div>
+                <div class="screenshot-item"><img src="../../Images/Unity/PingPong/PingPong_4.gif" alt="PingPong_Img"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Responsibilities</h2>
+            <div class="list-container">
+                <div class="list-item">Architected core gameplay frameworks using professional design patterns.</div>
+                <div class="list-item">Developed and optimized custom components for critical game systems.</div>
+                <div class="list-item">Collaborated on system design to ensure a cohesive and polished experience.</div>
+                <div class="list-item">Refined gameplay loops through data-driven analysis and testing.</div>
+                <div class="list-item">Implemented sophisticated AI logic and navigation systems.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Links</h2>
+            <div class="links-container">
+                <a href="https://github.com/vamsi230/Pong-Rewired.git" class="btn btn-primary">View Repository</a>
+                <a href="https://gamerthing4.itch.io" class="btn btn-secondary">Download Build</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

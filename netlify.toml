@@ -1,0 +1,4 @@
+[[redirects]]
+        from = "/index.html"
+        to = "/Resume/Resume.html"
+        status = 301
