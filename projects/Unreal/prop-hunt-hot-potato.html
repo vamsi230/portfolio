@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serpent Shift | Project Details</title>
+    <title>Prop Hunt (Hot Potato) | Project Details</title>
     <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Google Fonts: Poppins for body, JetBrains Mono for a "coder" feel -->
@@ -80,9 +80,9 @@
             justify-content: center;
         }
 
+        .hero-media iframe,
         .hero-media img,
-        .hero-media video,
-        .hero-media iframe {
+        .hero-media video {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -291,75 +291,86 @@
 
         <header class="hero">
             <div class="hero-media">
-                <img src="../../gifs/GameJamWaveSpawner.gif" alt="Serpent Shift Preview">
+                <iframe 
+                    src="https://player.vimeo.com/video/1189062500?autoplay=0&loop=0&title=0&byline=0&portrait=0"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
-            <h1 class="project-title">Serpent Shift</h1>
-            <p class="project-hook">Game Jam Survival Shooter</p>
+            <h1 class="project-title">Prop Hunt (Hot Potato)</h1>
+            <p class="project-hook">UE5 Multiplayer Systems & Dynamic Networking</p>
         </header>
 
         <div class="quick-info">
             <div class="info-item">
                 <span class="info-label">Engine</span>
-                <span class="info-value">Unity</span>
+                <span class="info-value">Unreal Engine 5</span>
             </div>
             <div class="info-item">
                 <span class="info-label">Genre</span>
-                <span class="info-value">Action / Survival</span>
+                <span class="info-value">Multiplayer Party / Systems</span>
             </div>
             <div class="info-item">
                 <span class="info-label">Role</span>
-                <span class="info-value">Solo Developer</span>
+                <span class="info-value">Gameplay Systems Engineer</span>
             </div>
             <div class="info-item">
-                <span class="info-label">Timeline</span>
-                <span class="info-value">48 Hours</span>
+                <span class="info-label">Status</span>
+                <span class="info-value">In Development</span>
             </div>
         </div>
 
         <section>
             <h2>Project Overview</h2>
             <p class="overview-text">
-                A survival-focused 2D shooter developed for Mini Jam 196. The project features a unique mechanic where combat modes shift every minute, requiring the player to adapt their strategy.
+                <strong>Prop Hunt (Hot Potato)</strong> is a unique take on the classic hide-and-seek genre. Built with <strong>Unreal Engine 5</strong> and <strong>C++</strong>, it introduces a "Hot Potato" mechanic where roles can switch dynamically mid-round, forcing players to adapt their strategies instantly. The project focuses heavily on robust LAN networking and modular gameplay systems.
             </p>
         </section>
 
         <section>
             <h2>Key Features</h2>
             <div class="list-container">
-                <div class="list-item">Advanced Unity implementation with a focus on performance and reliability.</div>
-                <div class="list-item">Modular software architecture designed for scalability and code reuse.</div>
-                <div class="list-item">High-fidelity player feedback and polished gameplay mechanics.</div>
-                <div class="list-item">Custom tools and data-driven systems for rapid iteration.</div>
-                <div class="list-item">Intuitive user interfaces and responsive input handling.</div>
+                <div class="list-item">
+                    <span><strong>Dynamic Role Switching:</strong> Implemented a "Hot Potato" system that transfers the hunter role between players based on gameplay events.</span>
+                </div>
+                <div class="list-item">
+                    <span><strong>Prop Transformation System:</strong> Developed a flexible system for players to transform into various environmental actors while maintaining networked synchronization.</span>
+                </div>
+                <div class="list-item">
+                    <span><strong>LAN Multiplayer Networking:</strong> Set up a robust LAN-based session system using Unreal's Online Subsystem for low-latency local play.</span>
+                </div>
+                <div class="list-item">
+                    <span><strong>System-Driven Gameplay:</strong> Focused on decoupled C++ logic to manage game states, timers, and player scoring.</span>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Gallery</h2>
             <div class="screenshot-grid">
-                <div class="screenshot-item"><img src="../../Images/Unity/GameJamWaveSpawner/GameJam_1.gif" alt="GameJamWaveSpawner_Img"></div>
-                <div class="screenshot-item"><img src="../../Images/Unity/GameJamWaveSpawner/GameJam_2.gif" alt="GameJamWaveSpawner_Img"></div>
-                <div class="screenshot-item"><img src="../../Images/Unity/GameJamWaveSpawner/GameJam_3.gif" alt="GameJamWaveSpawner_Img"></div>
-                <div class="screenshot-item"><img src="../../Images/Unity/GameJamWaveSpawner/GameJam_4.gif" alt="GameJamWaveSpawner_Img"></div>
+                <div class="screenshot-item"><img src="../../Images/Unreal/HotProp/HotProp_1.png"></div>
+                <div class="screenshot-item"><img src="../../Images/Unreal/HotProp/HotProp_2.png"></div>
+                <div class="screenshot-item"><img src="../../Images/Unreal/HotProp/HotProp_3.png"></div>
+                <div class="screenshot-item"><img src="../../Images/Unreal/HotProp/HotProp_4.png"></div>
             </div>
         </section>
 
         <section>
             <h2>Technical Responsibilities</h2>
             <div class="list-container">
-                <div class="list-item">Architected core gameplay frameworks using professional design patterns.</div>
-                <div class="list-item">Developed and optimized custom components for critical game systems.</div>
-                <div class="list-item">Collaborated on system design to ensure a cohesive and polished experience.</div>
-                <div class="list-item">Refined gameplay loops through data-driven analysis and testing.</div>
-                <div class="list-item">Implemented sophisticated AI logic and navigation systems.</div>
+                <div class="list-item">Engineered networked actor replication for prop transformations to ensure visual consistency across clients.</div>
+                <div class="list-item">Implemented a modular GameState and PlayerState architecture to handle the "Hot Potato" logic.</div>
+                <div class="list-item">Designed a custom UI system using UMG to display real-time role updates and countdown timers.</div>
+                <div class="list-item">Optimized network traffic by using efficient RPCs and property replication.</div>
             </div>
         </section>
 
         <section>
             <h2>Links</h2>
             <div class="links-container">
-                <a href="https://github.com/vamsi230/SerpentShift.git" class="btn btn-primary">View Repository</a>
-                <a href="https://gamerthing4.itch.io" class="btn btn-secondary">Download Build</a>
+                <a href="https://github.com/vamsi230/HotProp.git" class="btn btn-primary">View Repository</a>
+                <a href="https://drive.google.com/drive/folders/1nUFi9K4JGNyqiFJ7SbXR0O67NmAAewB-?usp=drive_link" class="btn btn-secondary">Download Build</a>
             </div>
         </section>
     </div>

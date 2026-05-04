@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Void Hunter | Project Details</title>
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts: Poppins for body, JetBrains Mono for a "coder" feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050505;
-            --surface-color: #111111;
-            --accent-color: #00f2ff;
+            --bg-color: #080808;
+            --surface-color: #151515;
+            --accent-color: #00f2f2;
             --text-primary: #ffffff;
             --text-secondary: #a0a0a0;
-            --border-color: #222222;
+            --border-color: rgba(255, 255, 255, 0.05);
             --transition: all 0.3s ease;
+            --font-main: 'Poppins', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
         }
 
         * {
@@ -24,7 +30,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: var(--font-main);
             line-height: 1.6;
             padding-bottom: 80px;
         }
@@ -47,6 +53,8 @@
             align-items: center;
             gap: 8px;
             transition: var(--transition);
+            font-family: var(--font-mono);
+            font-weight: 700;
         }
 
         .back-link:hover {
@@ -61,7 +69,7 @@
         .hero-media {
             width: 100%;
             aspect-ratio: 16 / 9;
-            background: var(--surface-color);
+            background: #0a0a0a;
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 32px;
@@ -72,11 +80,13 @@
             justify-content: center;
         }
 
+        .hero-media iframe,
         .hero-media img,
         .hero-media video {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            border: none;
         }
 
         .project-title {
@@ -84,6 +94,7 @@
             font-weight: 800;
             margin-bottom: 8px;
             letter-spacing: -0.02em;
+            text-transform: uppercase;
         }
 
         .project-hook {
@@ -91,6 +102,7 @@
             color: var(--accent-color);
             font-weight: 500;
             opacity: 0.9;
+            font-family: var(--font-mono);
         }
 
         .quick-info {
@@ -113,13 +125,16 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--text-secondary);
+            color: var(--accent-color);
             margin-bottom: 4px;
+            font-family: var(--font-mono);
+            font-weight: 700;
         }
 
         .info-value {
             font-weight: 600;
             font-size: 1rem;
+            color: var(--text-secondary);
         }
 
         section {
@@ -134,6 +149,7 @@
             margin-bottom: 24px;
             display: flex;
             align-items: center;
+            font-family: var(--font-mono);
         }
 
         h2::after {
@@ -202,10 +218,6 @@
             transform: translateY(-4px);
         }
 
-        .screenshot-item::after {
-            content: "";
-        }
-
         .links-container {
             display: flex;
             gap: 16px;
@@ -215,13 +227,17 @@
         .btn {
             display: inline-block;
             padding: 14px 28px;
-            border-radius: 4px;
+            border-radius: 0.5rem;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: var(--transition);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            font-family: var(--font-mono);
+            border: 1px solid var(--accent-color);
+            text-align: center;
+            flex: 1;
         }
 
         .btn-primary {
@@ -231,18 +247,23 @@
 
         .btn-secondary {
             background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
+            color: var(--accent-color);
         }
 
         .btn:hover {
-            opacity: 0.85;
+            opacity: 1;
             transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent-color);
         }
 
         .btn-secondary:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
+            background: var(--accent-color);
+            color: var(--bg-color);
         }
 
         @media (max-width: 600px) {
@@ -251,6 +272,12 @@
             }
             .quick-info {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+            .links-container {
+                flex-direction: column;
             }
         }
     </style>
@@ -264,16 +291,12 @@
 
         <header class="hero">
             <div class="hero-media">
-                <div class="hero-media">
-                    <iframe 
-src="https://player.vimeo.com/video/1175942265"
-width="100%" 
-height="500"
-frameborder="0"
-allow="autoplay; fullscreen; picture-in-picture"
-allowfullscreen>
-</iframe>
-                </div>
+                <iframe 
+                    src="https://player.vimeo.com/video/1175942265"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
             <h1 class="project-title">Void Hunter</h1>
             <p class="project-hook">Modular Gameplay Systems & Data-Driven Wave Architectures</p>
