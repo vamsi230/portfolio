@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Dharmavarapu - Resume</title>
+    <title>Vamsi Dharmavarapu - Resume | Gameplay Systems Engineer (Unreal Engine 5 | C++)</title>
     <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Resume.css">
 </head>
 <body>
     <div class="resume-container">
+        <!-- Top Action Buttons -->
+        <div class="top-nav-actions no-print">
+            <a href="../index.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back to Portfolio</a>
+            <button onclick="window.print()" class="print-btn"><i class='bx bx-printer'></i> Print / Save as PDF</button>
+        </div>
+
         <!-- Sidebar/Header Section -->
         <header class="resume-header">
             <div class="header-content">
                 <h1 class="name">VAMSI <span>DHARMAVARAPU</span></h1>
-                <h2 class="title">Gameplay Systems Engineer</h2>
-                <p class="subtitle">Specializing in Unreal Engine (C++) & Unity (C#)</p>
+                <h2 class="title">Game Programmer | Unreal Engine 5 | C++</h2>
+                <p class="subtitle">Building Scalable Multiplayer, Simulation & Gameplay Systems • Bengaluru, Karnataka, India</p>
                 
                 <div class="contact-grid">
                     <a href="mailto:veerendra.dharmavarapu@gmail.com"><i class='bx bx-envelope'></i> veerendra.dharmavarapu@gmail.com</a>
                     <a href="tel:+919182696796"><i class='bx bx-phone'></i> +91 9182696796</a>
-                    <a href="https://vamsidharmavarapu.vercel.app/" target="_blank"><i class='bx bx-globe'></i> Portfolio</a>
-                    <a href="https://linkedin.com/in/vamsi-dharmavarapu-083515216" target="_blank"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
-                    <a href="https://github.com/vamsi230" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
+                    <a href="https://vamsidharmavarapu.vercel.app/" target="_blank"><i class='bx bx-globe'></i> vamsidharmavarapu.vercel.app</a>
+                    <a href="https://linkedin.com/in/vamsi230" target="_blank"><i class='bx bxl-linkedin-square'></i> linkedin.com/in/vamsi230</a>
+                    <a href="https://github.com/vamsi230" target="_blank"><i class='bx bxl-github'></i> github.com/vamsi230</a>
                 </div>
             </div>
         </header>
@@ -32,38 +38,118 @@
         <!-- Summary Section -->
         <section class="resume-section">
             <h3 class="section-title"><i class='bx bx-user'></i> Professional Summary</h3>
-            <p>Gameplay Systems Engineer with a deep focus on architecting high-performance, modular systems in <strong>Unreal Engine 5 (C++)</strong> and <strong>Unity (C#)</strong>. Proven track record of transitioning hobbyist patterns into industry-standard architectures, including interface-driven combat, data-driven AI, and component-based ability systems. Committed to technical integrity and "game feel" polish.</p>
+            <p>
+                Gameplay Systems Engineer with studio experience developing simulation mechanics and gameplay frameworks in <strong>Unreal Engine 5 using C++</strong>. Primary gameplay programmer on commercial simulation <em>Lord of Kensai</em> at WRKS Games (in active development with a publisher-ready milestone delivered), transitioning from internship to full-time developer. Practical focus on modular gameplay architecture, spline-based procedural construction, autonomous villager AI, and performance optimization. Currently expanding technical capabilities into graphics programming (HLSL / render pipelines).
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="resume-section">
+            <h3 class="section-title"><i class='bx bx-briefcase-alt-2'></i> Work Experience</h3>
+
+            <!-- Company 1: WRKS Games -->
+            <div class="experience-block">
+                <div class="exp-header">
+                    <div>
+                        <h4 class="company">WRKS Games</h4>
+                        <span class="role">C++ Unreal Engine Developer (Full-Time) • <span style="font-weight:400;color:#94a3b8;">Nov 2026 – Present</span></span>
+                        <span class="role" style="color:#94a3b8;font-size:0.9rem;">C++ Unreal Engine Developer (Internship) • <span style="font-weight:400;">Aug 2026 – Oct 2026</span></span>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="dates">August 2026 – Present</span>
+                        <span class="location">Singapore (Remote)</span>
+                    </div>
+                </div>
+                
+                <p class="project-context">
+                    Worked as the sole primary gameplay programmer on <strong>Lord of Kensai</strong>, a commercial city-building and resource management simulation in Unreal Engine 5 using C++ (currently in active development with a publisher-ready milestone build delivered). Transitioned from 3-month internship to full-time role in November 2026 to lead further mode extensions, systems iteration, and optimization.
+                </p>
+
+                <ul class="experience-bullets">
+                    <li><strong>Gameplay Architecture:</strong> Developed modular gameplay systems for grid-based building placement, terrain collision validation, slope threshold calculations, and construction stage state machines.</li>
+                    <li><strong>Procedural Systems:</strong> Implemented spline-based construction tools and real-time procedural mesh generation (<code>UProceduralMeshComponent</code>) for custom roads and perimeter fortification walls.</li>
+                    <li><strong>Simulation Systems:</strong> Developed comprehensive resource management, facility tier upgrades, asynchronous production queues, and associated Slate/UMG data binding.</li>
+                    <li><strong>Faction Systems:</strong> Implemented data-driven faction gameplay logic, dynamic world trigger events, and reputation progression management.</li>
+                    <li><strong>AI & NPC Systems:</strong> Developed AI functionality for villagers and utility units, including navigation (<code>NavMesh</code>), task management queues, and behavioral logic routines.</li>
+                    <li><strong>Debugging & Optimization:</strong> Resolved 50+ critical bugs across gameplay loops, save/load persistence serialization, and memory lifecycle management in development builds.</li>
+                </ul>
+            </div>
+
+            <!-- Company 2: Yarvix -->
+            <div class="experience-block">
+                <div class="exp-header">
+                    <div>
+                        <h4 class="company">Yarvix</h4>
+                        <span class="role">Gameplay Systems Contributor <span class="unpaid-badge">(Concurrent • Unpaid Contribution)</span></span>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="dates">November 2026 – Present</span>
+                        <span class="location">Remote</span>
+                    </div>
+                </div>
+
+                <ul class="experience-bullets">
+                    <li><strong>Surface Cleaning via Render Targets:</strong> Engineered real-time surface cleanliness painting mechanics utilizing Unreal Engine Render Targets (<code>UTextureRenderTarget2D</code>) and dynamic material instances for indie survival prototype <em>Leave Alive</em>.</li>
+                    <li><strong>First-Person Interaction Systems:</strong> Developed responsive first-person character camera setups, contextual item pickups, and montage animation playback triggers.</li>
+                    <li><strong>State & Progress Architecture:</strong> Designed a modular cleaning progress system evaluating surface cleanliness states and firing environmental transitions on an unpaid collaborative basis.</li>
+                </ul>
+            </div>
+
+            <!-- Company 3: Akiyam Solutions -->
+            <div class="experience-block">
+                <div class="exp-header">
+                    <div>
+                        <h4 class="company">Akiyam Solutions Private Limited</h4>
+                        <span class="role">Gameplay Systems Engineer</span>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="dates">June 2026 – July 2026</span>
+                        <span class="location">India</span>
+                    </div>
+                </div>
+
+                <ul class="experience-bullets">
+                    <li><strong>Custom Engine Subsystems:</strong> Developed custom Subsystems with <code>UGameInstanceSubsystem</code> and <code>UWorldSubsystem</code> for scalable architecture, including NPC Relations Subsystem and Custom World Rules.</li>
+                    <li><strong>Reusable Plugins:</strong> Created decoupled, reusable Unreal Engine plugins and framework components to enhance code maintainability and reusability across internal projects.</li>
+                    <li><strong>Data-Driven Gameplay:</strong> Designed and implemented modular, data-driven gameplay systems in Unreal Engine 5 using C++ and Data Assets.</li>
+                </ul>
+            </div>
         </section>
 
         <!-- Technical Skills Section -->
         <section class="resume-section">
-            <h3 class="section-title"><i class='bx bx-code-alt'></i> Technical Skills</h3>
+            <h3 class="section-title"><i class='bx bx-code-alt'></i> Technical Skills & Exploration</h3>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4>Core Technologies</h4>
+                    <h4>Core Technologies & Languages</h4>
                     <ul>
-                        <li>Unreal Engine 5 (C++, Blueprints)</li>
-                        <li>Unity (C#)</li>
-                        <li>C++, C#, Python, HLSL (Learning)</li>
-                        <li>Git, Visual Studio, Rider</li>
+                        <li>Unreal Engine 5 (C++, Blueprints, Slate/UMG)</li>
+                        <li>Unity (C#, 2D/3D)</li>
+                        <li>Modern C++ (17/20, OOP, RAII, Memory Optimization)</li>
+                        <li>Python, Git, Git LFS, Perforce, Rider, VS2022</li>
+                        <li><em>HLSL / GLSL Shaders (Active Self-Study)</em></li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h4>Gameplay Systems</h4>
+                    <h4>Gameplay & Simulation Systems</h4>
                     <ul>
-                        <li>Modular Ability Systems (VHAbilityBase)</li>
-                        <li>Interface-Driven Combat (IVHDamageInterface)</li>
-                        <li>Data-Driven Wave Systems</li>
-                        <li>Enhanced Input, Subobjects</li>
+                        <li>Custom Engine Subsystems (<code>UWorldSubsystem</code>, <code>UGameInstanceSubsystem</code>)</li>
+                        <li>Grid-Based Building & Terrain Validation</li>
+                        <li>Procedural Splines & Mesh Generation</li>
+                        <li>Resource Simulation & Production Queues</li>
+                        <li>Multiplayer Networking & RPC Replication</li>
+                        <li>Save/Load Persistence Serialization</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h4>AI & Math</h4>
+                    <h4>AI, Math & Optimization</h4>
                     <ul>
-                        <li>Behavior Trees & Blackboards</li>
+                        <li>Behavior Trees, Blackboards & Utility AI</li>
+                        <li>Autonomous Villager Task Queues & Routines</li>
+                        <li>NavMesh, Pathfinding & Line Tracing</li>
                         <li>Finite State Machines (FSM)</li>
-                        <li>Linear Algebra for Games</li>
-                        <li>Sphere Sweeps, Raycasting, Physics</li>
+                        <li>Unreal Insights Profiling & Memory Leak Isolation</li>
+                        <li>Vector Math, Collision Sweeps & Bounding Tests</li>
                     </ul>
                 </div>
             </div>
@@ -71,50 +157,49 @@
 
         <!-- Projects Section -->
         <section class="resume-section">
-            <h3 class="section-title"><i class='bx bx-briefcase'></i> Key Projects</h3>
+            <h3 class="section-title"><i class='bx bx-folder-open'></i> Key Independent & Prototype Projects</h3>
 
             <div class="project-item">
                 <div class="project-header">
-                    <h4>Void Hunter | Unreal Engine 5 RPG</h4>
-                    <span>Gameplay Systems Engineer</span>
+                    <h4>Prop Hunt (Hot Potato) | UE5 Multiplayer</h4>
+                    <span>Gameplay Systems Engineer • 30 Days</span>
                 </div>
                 <ul class="project-details">
-                    <li><strong>Modular Ability System:</strong> Architected <code>VHAbilityBase</code>, a component-based system enabling extensible player/enemy abilities like Dash and Void Nova.</li>
-                    <li><strong>Interface-Driven Architecture:</strong> Developed <code>IVHDamageInterface</code> to decouple health and damage logic, ensuring a scalable and modular codebase.</li>
-                    <li><strong>Advanced AI:</strong> Built complex AI loops (Chase -> Attack) using <strong>Behavior Trees</strong> and custom AI Controllers, replacing timer-based logic with industry standards.</li>
-                    <li><strong>Data-Driven Wave System:</strong> Designed a scalable spawning system utilizing custom C++ structs for dynamic difficulty and enemy management.</li>
-                    <li><strong>Game Feel:</strong> Integrated "Juice" elements including <strong>Hit Stop</strong> and <strong>Camera Shake</strong> via a dedicated <code>VoidCombatComponent</code>.</li>
+                    <li><strong>Multiplayer Networking:</strong> Implemented LAN-based multiplayer networking in UE5 with client-server RPCs for dynamic role switching (Prop vs. Hunter).</li>
+                    <li><strong>System Logic:</strong> Developed the "Hot Potato" countdown twist mechanic with replicated state synchronization across all connected clients.</li>
                 </ul>
             </div>
 
             <div class="project-item">
                 <div class="project-header">
-                    <h4>Prop Hunt (Hot Potato) | UE5 Multiplayer</h4>
-                    <span>Gameplay Systems Engineer</span>
+                    <h4>Void Hunter | Unreal Engine 5 RPG</h4>
+                    <span>Gameplay Systems Engineer • 20 Days</span>
                 </div>
                 <ul class="project-details">
-                    <li><strong>Networking:</strong> Implemented LAN-based multiplayer networking for dynamic role switching (Prop vs. Hunter).</li>
-                    <li><strong>System Logic:</strong> Developed the "Hot Potato" twist mechanic, handling state synchronization across clients.</li>
+                    <li><strong>Modular Ability System:</strong> Architected <code>VHAbilityBase</code>, an extensible component-based system enabling custom player/enemy abilities.</li>
+                    <li><strong>Interface-Driven Architecture:</strong> Developed <code>IVHDamageInterface</code> to decouple health, damage calculation, and combat reactions for clean scalability.</li>
+                    <li><strong>Advanced AI:</strong> Built responsive combat AI loops using <strong>Behavior Trees</strong> and custom AI Controllers.</li>
+                    <li><strong>Game Feel:</strong> Integrated hit stop, camera shake, and impact responsiveness via a dedicated <code>VoidCombatComponent</code>.</li>
                 </ul>
             </div>
 
             <div class="project-item">
                 <div class="project-header">
                     <h4>Serpent Shift | Unity 2D Survival</h4>
-                    <span>Solo Developer (Game Jam)</span>
+                    <span>Solo Developer • 3 Days (Game Jam)</span>
                 </div>
                 <ul class="project-details">
-                    <li>Developed core gameplay systems including wave spawning and dynamic Ranged/Melee combat shifts within a 3-day deadline.</li>
+                    <li>Developed core gameplay systems including dynamic Ranged/Melee combat stance shifts and escalating wave spawner within a 3-day deadline.</li>
                 </ul>
             </div>
 
             <div class="project-item">
                 <div class="project-header">
                     <h4>Spectral Maze | Unity AI Horror</h4>
-                    <span>Gameplay Programmer</span>
+                    <span>Gameplay Programmer • 1 Week</span>
                 </div>
                 <ul class="project-details">
-                    <li>Implemented AI chase mechanics and token collection loops for a first-person horror prototype.</li>
+                    <li>Implemented AI chase mechanics, NavMesh pathfinding, line-of-sight triggers, and token collection loops for a first-person horror prototype.</li>
                 </ul>
             </div>
         </section>
@@ -124,25 +209,34 @@
             <h3 class="section-title"><i class='bx bx-book-bookmark'></i> Education</h3>
             <div class="education-item">
                 <div class="edu-header">
-                    <h4>B.Sc. in Game Design And Development</h4>
-                    <span>2024 - 2027 (Expected)</span>
+                    <h4>Bachelor of Science, Game Design and Development</h4>
+                    <span>August 2024 – July 2027</span>
                 </div>
-                <p>IIFA Lancaster Degree College, Bangalore</p>
+                <p>IIFA Lancaster Degree College, Bangalore, India</p>
             </div>
             <div class="education-item">
                 <div class="edu-header">
-                    <h4>B.Tech. Electronics And Communication Engineering</h4>
-                    <span>2021 - 2023</span>
+                    <h4>Bachelor of Technology, Electrical, Electronics and Communications Engineering</h4>
+                    <span>September 2021 – July 2023</span>
                 </div>
-                <p>VIT, Vellore (Dropped out to pursue passion in Game Development)</p>
+                <p>Vellore Institute of Technology (VIT), Vellore, India (Transitioned to full-time Game Development)</p>
+            </div>
+            <div class="education-item">
+                <div class="edu-header">
+                    <h4>FIITJEE</h4>
+                    <span>July 2019 – May 2021</span>
+                </div>
+                <p>Higher Secondary Education / Pre-Engineering</p>
             </div>
         </section>
 
         <!-- Footer / Call to Action -->
-        <footer class="resume-footer">
+        <footer class="resume-footer no-print">
             <div class="resume-actions">
                 <a href="../index.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back to Portfolio</a>
+                <a href="mailto:veerendra.dharmavarapu@gmail.com" class="hire-btn"><i class='bx bx-send'></i> Contact Vamsi</a>
             </div>
+            <p>© 2026 Vamsi Dharmavarapu • Portfolio: <a href="https://vamsidharmavarapu.vercel.app/" target="_blank">vamsidharmavarapu.vercel.app</a></p>
         </footer>
     </div>
 </body>

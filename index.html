@@ -3,116 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Dharmavarapu | Gameplay Programmer</title>
+    <title>Vamsi Dharmavarapu | Gameplay & Systems Programmer (Unreal Engine 5 | C++)</title>
     <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Google Fonts: Poppins for body, JetBrains Mono for a "coder" feel -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- Navigation -->
     <header class="header">
-        <a href="#" class="logo">VAMSI<span>.DEV</span></a>
+        <a href="#home" class="logo">VAMSI<span>.DEV</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
-        <a href="Resume/Resume.html" class="resume-btn">VIEW RESUME</a>
+        <div class="header-actions">
+            <a href="Resume/Resume.html" class="resume-btn"><i class='bx bx-file'></i> VIEW RESUME</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <div class="hero-label">SYSTEMS & GAMEPLAY ENGINEER</div>
-            <h1>I build <span>gameplay</span> systems.</h1>
-            <h3 class="typing-text">> <span id="typed"></span></h3>
-            <p>A gameplay programmer specializing in <strong>Unreal Engine (C++)</strong> and <strong>Unity (C#)</strong>. My focus is on creating modular, scalable systems and ensuring a polished, responsive gameplay experience.</p>
+            <div class="hero-badge">
+                <i class='bx bx-chip'></i> UNREAL ENGINE 5 • C++ GAMEPLAY & SYSTEMS ENGINEER
+            </div>
+            <h1>I architect <span>scalable gameplay</span> & simulation systems.</h1>
+            <h3 class="typing-text"><span class="typing-prefix">&gt; </span><span id="typed"></span><span class="typing-cursor">|</span></h3>
+            <p>
+                Gameplay Systems Engineer specializing in <strong>Unreal Engine 5 (C++)</strong> and <strong>Unity (C#)</strong>. Focused on building gameplay systems that are technically solid, modular, and fun to play with polished game feel. Experienced in driving production gameplay loops from initial architecture to performant, scalable builds.
+            </p>
             
+            <!-- Quick Stats Strip -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-num">6+ Mos</span>
+                    <span class="stat-label">Studio Production Exp</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">Commercial Sim (Lord of Kensai)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">8+</span>
+                    <span class="stat-label">Engineered Gameplay Projects</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">UE5 & C++</span>
+                    <span class="stat-label">Core Technical Focus</span>
+                </div>
+            </div>
+
             <div class="social-icons">
-                <a href="https://linkedin.com/in/vamsi-dharmavarapu-083515216" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://github.com/vamsi230" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://x.com/Vamsi_1193" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://linkedin.com/in/vamsi230" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/vamsi230" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="mailto:veerendra.dharmavarapu@gmail.com" title="Email Direct"><i class='bx bx-envelope'></i></a>
+                <a href="https://x.com/Vamsi_1193" target="_blank" title="Twitter / X"><i class='bx bxl-twitter'></i></a>
             </div>
 
             <div class="btn-group">
-                <a href="#projects" class="btn">VIEW PROJECTS</a>
-                <a href="#contact" class="btn btn-outline">SEND MESSAGE</a>
+                <a href="#experience" class="btn"><i class='bx bx-briefcase'></i> WORK EXPERIENCE</a>
+                <a href="#projects" class="btn btn-outline"><i class='bx bx-code-block'></i> VIEW PROJECTS</a>
+                <a href="#contact" class="btn btn-secondary"><i class='bx bx-send'></i> CONTACT ME</a>
             </div>
         </div>
         <div class="home-img">
             <div class="glowing-circle">
                 <img src="Images/potrait.jpeg" alt="Vamsi Dharmavarapu">
+                <div class="avatar-tag">
+                    <i class='bx bxs-badge-check'></i> C++ / UE5 Specialist
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section (Linear Timeline & Interactive Card Slider) -->
+    <section class="experience" id="experience">
+        <div class="section-header">
+            <span class="section-tag">// CAREER TIMELINE</span>
+            <h2 class="heading">Work <span>Experience</span></h2>
+            <p class="section-subtitle">
+                Production track record architecting commercial simulation systems, procedural tools, and robust Unreal Engine 5 frameworks.
+            </p>
+        </div>
+
+        <!-- Linear Timeline Rail Navigation (Present on Left -> Past on Right) -->
+        <div class="linear-timeline-container">
+            <div class="linear-timeline-track">
+                <div class="timeline-track-line"></div>
+                <div class="timeline-track-progress" id="timeline-progress"></div>
+
+                <!-- Milestone 0: WRKS Games (Present) -->
+                <div class="timeline-milestone active" data-slide="0" id="milestone-0" role="button" tabindex="0">
+                    <div class="milestone-pin-wrapper">
+                        <div class="milestone-pin">
+                            <i class='bx bxs-briefcase-alt-2'></i>
+                        </div>
+                        <div class="milestone-pulse"></div>
+                    </div>
+                    <div class="milestone-info">
+                        <span class="milestone-badge-date present">August 2026 – Present</span>
+                        <h4 class="milestone-title">WRKS Games</h4>
+                        <span class="milestone-sub">Full-Time & Internship</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 1: Yarvix (Concurrent) -->
+                <div class="timeline-milestone" data-slide="1" id="milestone-1" role="button" tabindex="0">
+                    <div class="milestone-pin-wrapper">
+                        <div class="milestone-pin">
+                            <i class='bx bxs-joystick'></i>
+                        </div>
+                        <div class="milestone-pulse"></div>
+                    </div>
+                    <div class="milestone-info">
+                        <span class="milestone-badge-date concurrent">November 2026 – Present</span>
+                        <h4 class="milestone-title">Yarvix</h4>
+                        <span class="milestone-sub">Concurrent</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: Akiyam Solutions (Past) -->
+                <div class="timeline-milestone" data-slide="2" id="milestone-2" role="button" tabindex="0">
+                    <div class="milestone-pin-wrapper">
+                        <div class="milestone-pin">
+                            <i class='bx bxs-layer'></i>
+                        </div>
+                        <div class="milestone-pulse"></div>
+                    </div>
+                    <div class="milestone-info">
+                        <span class="milestone-badge-date">June 2026 – July 2026</span>
+                        <h4 class="milestone-title">Akiyam Solutions</h4>
+                        <span class="milestone-sub">Gameplay Systems Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation Controls -->
+            <div class="slider-nav-bar">
+                <button class="slider-arrow prev" id="slider-prev-btn" title="Previous Experience" aria-label="Previous Slide">
+                    <i class='bx bx-chevron-left'></i>
+                </button>
+                <div class="slider-dots" id="slider-dots">
+                    <span class="slider-dot active" data-slide="0" title="WRKS Games"></span>
+                    <span class="slider-dot" data-slide="1" title="Yarvix"></span>
+                    <span class="slider-dot" data-slide="2" title="Akiyam Solutions"></span>
+                </div>
+                <button class="slider-arrow next" id="slider-next-btn" title="Next Experience" aria-label="Next Slide">
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Experience Card Slider Viewport -->
+        <div class="exp-slider-wrapper">
+            <div class="exp-slider-track" id="exp-slider-track">
+                
+                <!-- SLIDE 0: WRKS Games (PRESENT - LEFT) -->
+                <div class="exp-slide" data-slide-index="0">
+                    <div class="exp-card featured">
+                        <div class="card-glow-edge"></div>
+                        <div class="exp-card-header">
+                            <div class="company-badge-wrap">
+                                <span class="company-name"><i class='bx bxs-buildings'></i> WRKS Games</span>
+                                <span class="location-tag"><i class='bx bx-map-pin'></i> Singapore / Remote</span>
+                            </div>
+                            <div class="two-stage-timeline">
+                                <span class="tenure-badge active"><i class='bx bx-check-circle'></i> Full-Time: Nov 2026 – Present</span>
+                                <span class="tenure-badge internship"><i class='bx bx-time'></i> Internship: Aug 2026 – Oct 2026</span>
+                            </div>
+                        </div>
+
+                        <div class="role-title-row">
+                            <h3 class="role-title">C++ Unreal Engine Developer</h3>
+                            <div class="role-tags">
+                                <span class="role-tag primary">Sole Primary Gameplay Programmer</span>
+                                <span class="role-tag">Unreal Engine 5</span>
+                                <span class="role-tag">C++</span>
+                            </div>
+                        </div>
+
+                        <div class="project-spotlight-bar">
+                            <div class="spotlight-badge"><i class='bx bx-hammer'></i> IN ACTIVE DEVELOPMENT • PUBLISHER-READY SIMULATION</div>
+                            <h4>Lord of Kensai</h4>
+                            <p>Commercial City-Building & Resource Simulation in Unreal Engine 5 (C++). Primary gameplay engineer from initial internship to full-time development, delivering a publisher-ready milestone build.</p>
+                        </div>
+
+                        <!-- Core Systems Breakdown List -->
+                        <ul class="compact-systems-list">
+                            <li>
+                                <i class='bx bx-grid-alt'></i>
+                                <div>
+                                    <strong>Grid Building & Placement:</strong>
+                                    <span>Modular placement with multi-cell snapping, real-time terrain collision validation, slope limits, and multi-stage construction state machines.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-git-commit'></i>
+                                <div>
+                                    <strong>Procedural Spline Systems:</strong>
+                                    <span>Dynamic spline construction tools with real-time procedural mesh generation (<code>UProceduralMeshComponent</code>) for custom roads and perimeter fortification walls.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-package'></i>
+                                <div>
+                                    <strong>Simulation Economy Loops:</strong>
+                                    <span>Multi-tier resource management, facility upgrade trees, asynchronous production queues, and event-driven Slate/UMG data bindings.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-bot'></i>
+                                <div>
+                                    <strong>Autonomous Villager AI:</strong>
+                                    <span>NavMesh pathfinding, dynamic job assignment queues, and utility-based task prioritization routines.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-shield-quarter'></i>
+                                <div>
+                                    <strong>Faction Systems & Persistence:</strong>
+                                    <span>Data-driven faction events, reputation scaling, binary save/load state serialization, and 50+ critical fixes across development builds.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Compact System Demonstration Placeholders (Commented out until showcase clips are ready)
+                        <div class="compact-media-showcase">
+                            <div class="media-row-title">
+                                <i class='bx bx-video-recording'></i> <span>System Demonstrations & Showcase Placeholders:</span>
+                            </div>
+                            <div class="compact-media-deck">
+                                <div class="compact-media-placeholder" title="Replace with Spline Construction Video in index.html">
+                                    <i class='bx bx-play-circle'></i>
+                                    <div class="placeholder-caption">
+                                        <h6>Procedural Splines</h6>
+                                        <span>Mesh Generation Demo</span>
+                                    </div>
+                                </div>
+                                <div class="compact-media-placeholder" title="Replace with Grid Placement Clip in index.html">
+                                    <i class='bx bx-shape-square'></i>
+                                    <div class="placeholder-caption">
+                                        <h6>Grid Placement</h6>
+                                        <span>Terrain Validation</span>
+                                    </div>
+                                </div>
+                                <div class="compact-media-placeholder" title="Replace with Villager AI Clip in index.html">
+                                    <i class='bx bx-network-chart'></i>
+                                    <div class="placeholder-caption">
+                                        <h6>Villager AI</h6>
+                                        <span>Task Prioritization</span>
+                                    </div>
+                                </div>
+                                <div class="compact-media-placeholder" title="Replace with Economy Sim Clip in index.html">
+                                    <i class='bx bx-data'></i>
+                                    <div class="placeholder-caption">
+                                        <h6>Economy Loop</h6>
+                                        <span>Production Queues</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+                <!-- SLIDE 1: Yarvix (CONCURRENT - UNPAID ROLE) -->
+                <div class="exp-slide" data-slide-index="1">
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <div class="company-badge-wrap">
+                                <span class="company-name"><i class='bx bxs-game'></i> Yarvix</span>
+                                <span class="location-tag"><i class='bx bx-map-pin'></i> Remote</span>
+                            </div>
+                            <span class="tenure-badge concurrent"><i class='bx bx-git-pull-request'></i> November 2026 – Present • Concurrent</span>
+                        </div>
+
+                        <div class="role-title-row">
+                            <h3 class="role-title">Gameplay Systems Contributor</h3>
+                            <div class="role-tags">
+                                <span class="role-tag primary">Gameplay Programmer</span>
+                                <span class="role-tag">Unreal Engine 5</span>
+                                <span class="role-tag">Render Targets</span>
+                            </div>
+                        </div>
+
+                        <div class="project-spotlight-bar secondary">
+                            <div class="spotlight-badge"><i class='bx bx-ghost'></i> INDIE PROTOTYPE</div>
+                            <h4>Leave Alive</h4>
+                            <p>First-Person Horror & Survival Prototype in Unreal Engine 5. Contributed mechanics and interactive systems on an unpaid collaborative basis.</p>
+                        </div>
+
+                        <!-- Core Systems -->
+                        <ul class="compact-systems-list">
+                            <li>
+                                <i class='bx bx-brush'></i>
+                                <div>
+                                    <strong>Surface Cleaning via Render Targets:</strong>
+                                    <span>Real-time surface cleanliness painting utilizing Unreal Engine <strong>Render Targets</strong> (<code>UTextureRenderTarget2D</code>) and dynamic material instances.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-walk'></i>
+                                <div>
+                                    <strong>First-Person Interaction Suite:</strong>
+                                    <span>First-person camera rigs, contextual item pickup interactions, and synchronized character montage triggers.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-shield'></i>
+                                <div>
+                                    <strong>State & Progress Tracking:</strong>
+                                    <span>Modular cleaning progress architecture evaluating surface cleanliness percentages and firing environmental game state events.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="skills-highlight-box">
+                            <span class="sub-label">CONTRIBUTION DETAILS:</span>
+                            <div class="tag-container mini">
+                                <span class="tag">Unpaid Collaborative Role</span>
+                                <span class="tag">Render Targets</span>
+                                <span class="tag">Dynamic Materials</span>
+                                <span class="tag">First-Person Mechanics</span>
+                                <span class="tag">Git Source Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: Akiyam Solutions (PAST - RIGHT) -->
+                <div class="exp-slide" data-slide-index="2">
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <div class="company-badge-wrap">
+                                <span class="company-name"><i class='bx bxs-buildings'></i> Akiyam Solutions</span>
+                                <span class="location-tag"><i class='bx bx-map-pin'></i> India / Remote </span>
+                            </div>
+                            <span class="tenure-badge"><i class='bx bx-calendar'></i> June 2026 – July 2026</span>
+                        </div>
+
+                        <div class="role-title-row">
+                            <h3 class="role-title">Gameplay Systems Engineer</h3>
+                            <div class="role-tags">
+                                <span class="role-tag primary">Plugin Architecture</span>
+                                <span class="role-tag">Unreal Engine 5</span>
+                                <span class="role-tag">Subsystems</span>
+            
+                            </div>
+                        </div>
+
+                        <div class="project-spotlight-bar secondary">
+                            <div class="spotlight-badge"><i class='bx bx-cog'></i> FRAMEWORK & SUBSYSTEMS</div>
+                            <h4>Engine Architecture & Tooling</h4>
+                            <p>Engineered decoupled gameplay subsystems, reusable engine plugins, and data-driven systems in Unreal Engine 5 using C++.</p>
+                        </div>
+
+                        <!-- Core Pillars -->
+                        <ul class="compact-systems-list">
+                            <li>
+                                <i class='bx bx-layer'></i>
+                                <div>
+                                    <strong>Engine Subsystems Architecture:</strong>
+                                    <span>Scalable game-wide subsystems leveraging <code>UGameInstanceSubsystem</code> and <code>UWorldSubsystem</code> (NPC Relations Subsystem, Custom World Rules).</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-extension'></i>
+                                <div>
+                                    <strong>Modular Plugin Framework:</strong>
+                                    <span>Decoupled, reusable actor components and plugin modules engineered to maximize code reusability across multiple game prototypes.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-code-alt'></i>
+                                <div>
+                                    <strong>Data-Driven Gameplay Architecture:</strong>
+                                    <span>Modular gameplay systems driven by C++ structs, Data Assets, and reflection-based event delegates for rapid designer iteration.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="skills-highlight-box">
+                            <span class="sub-label">KEY ARCHITECTURAL HIGHLIGHTS:</span>
+                            <div class="tag-container mini">
+                                <span class="tag">UGameInstanceSubsystem</span>
+                                <span class="tag">UWorldSubsystem</span>
+                                <span class="tag">Decoupled Plugins</span>
+                                <span class="tag">Data Assets</span>
+                                <span class="tag">Reflection & Delegates</span>
+                                <span class="tag">Clean C++ Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2 class="heading">Technical <span>Skills</span></h2>
-        <p class="section-subtitle">Focused on gameplay programming and system design, with growing interest in graphics programming.</p>
+        <div class="section-header">
+            <span class="section-tag">// TECHNICAL CAPABILITIES</span>
+            <h2 class="heading">Technical <span>Skills</span></h2>
+            <p class="section-subtitle">
+                Engine-level gameplay architecture, simulation mechanics, C++ systems design, and high-performance game optimization.
+            </p>
+        </div>
+
+        <!-- Active Direction & Self-Study Callout -->
+        <div class="learning-direction-banner reveal">
+            <div class="direction-badge"><i class='bx bx-compass'></i> CURRENT LEARNING PATHWAY</div>
+            <div class="direction-content">
+                <h4>Graphics Programming & Shaders (HLSL / GLSL)</h4>
+                <p>
+                    Actively expanding into graphics programming, shader authoring, and rendering pipelines to bridge gameplay systems with visual fidelity. Applied in Render Target surface painting mechanics (Yarvix), with ongoing self-study in custom post-process materials, compute shaders, and buffer passes in Unreal Engine & Unity.
+                </p>
+            </div>
+        </div>
+
         <div class="skills-container">
+            <!-- Skill Card 1: Unreal Engine & Architecture -->
             <div class="skill-card reveal">
-                <i class='bx bx-code-curly'></i>
-                <h3>Core Languages</h3>
-                <p>C++, C#</p>
-                <p>Python (basic scripting)</p>
-                <p>HLSL/GLSL (learning)</p>
+                <div class="skill-icon-wrapper">
+                    <i class='bx bxs-component'></i>
+                </div>
+                <h3>Unreal Engine 5 & Architecture</h3>
+                <ul class="skill-list">
+                    <li><strong>UE5 C++ Core:</strong> Studio experience with <code>UObject</code> lifecycle, UBT/UHT macros, smart pointers, and garbage collection.</li>
+                    <li><strong>Engine Subsystems:</strong> Scalable global architecture via <code>UGameInstanceSubsystem</code> and <code>UWorldSubsystem</code>.</li>
+                    <li><strong>Modular Frameworks:</strong> Decoupled systems using custom Actor Components, interfaces (<code>UInterface</code>), and event delegates.</li>
+                    <li><strong>Enhanced Input & UMG:</strong> Input Mapping Contexts (IMC), responsive action triggers, and Slate/UMG data binding.</li>
+                    <li><strong>Save / Load Persistence:</strong> Binary serialization, custom SaveGame objects, and reliable world state restoration.</li>
+                </ul>
                 <div class="tag-container">
-                    <span class="tag">OOP</span>
-                    <span class="tag">Game Programming</span>
-                    <span class="tag">Debugging</span>
+                    <span class="tag">UE5.x</span>
+                    <span class="tag">C++ Subsystems</span>
+                    <span class="tag">Actor Components</span>
+                    <span class="tag">Save Persistence</span>
+                    <span class="tag">Slate / UMG</span>
+                    <span class="tag">Plugins</span>
                 </div>
             </div>
+
+            <!-- Skill Card 2: Core Programming Languages -->
             <div class="skill-card reveal">
-                <i class='bx bxs-component'></i>
-                <h3>Game Engines</h3>
-                <p>Unreal Engine 5 (C++, Blueprints)</p>
-                <p>Unity (2D/3D, C#)</p>
+                <div class="skill-icon-wrapper">
+                    <i class='bx bx-code-curly'></i>
+                </div>
+                <h3>Programming Languages & Systems</h3>
+                <ul class="skill-list">
+                    <li><strong>Modern C++ (17/20):</strong> Applied mastery of OOP, RAII, pointers/references, templates, and low-level memory allocation.</li>
+                    <li><strong>C# & Unity Engine:</strong> 2D/3D gameplay architecture, ScriptableObjects, event messaging, and physics loops.</li>
+                    <li><strong>Python Scripting:</strong> Tooling automation, data parsing, GDD extraction, and asset pipeline scripting.</li>
+                    <li><strong>Graphics & Shaders:</strong> Hands-on Render Target mechanics (Yarvix), fundamental study of HLSL/GLSL, and rendering passes.</li>
+                </ul>
                 <div class="tag-container">
-                    <span class="tag">Gameplay Programming</span>
-                    <span class="tag">Component-Based Architecture</span>
-                    <span class="tag">Rapid Prototyping</span>
+                    <span class="tag">Modern C++</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Memory Management</span>
+                    <span class="tag">Data-Oriented</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">HLSL (Learning)</span>
                 </div>
             </div>
+
+            <!-- Skill Card 3: AI, Simulation & Procedural Tech -->
             <div class="skill-card reveal">
-                <i class='bx bx-brain'></i>
-                <h3>Gameplay Systems</h3>
-                <p>Finite State Machines (FSM)</p>
-                <p>Basic AI Behaviors (enemy types, waves)</p>
-                <p>Combat Systems (health, damage, simple abilities)</p>
-                <p>Player Movement Systems</p>
+                <div class="skill-icon-wrapper">
+                    <i class='bx bx-brain'></i>
+                </div>
+                <h3>AI, Simulation & Procedural Tech</h3>
+                <ul class="skill-list">
+                    <li><strong>AI & Navigation:</strong> Behavior Trees, Blackboards, EQS queries, custom Tasks/Decorators, and NavMesh navigation.</li>
+                    <li><strong>Utility AI & Queues:</strong> Complex NPC/Villager routines, autonomous job queues, and dynamic task priorities.</li>
+                    <li><strong>Procedural Tech:</strong> Spline-based road/wall tools with real-time mesh generation via <code>UProceduralMeshComponent</code>.</li>
+                    <li><strong>Spatial & Grid Math:</strong> Multi-cell grid placement, collision sweeping, vector dot/cross math, and terrain raycasts.</li>
+                </ul>
                 <div class="tag-container">
-                    <span class="tag">Systems Design</span>
-                    <span class="tag">Game Logic</span>
-                    <span class="tag">Iteration</span>
+                    <span class="tag">Behavior Trees</span>
+                    <span class="tag">Utility AI</span>
+                    <span class="tag">Procedural Mesh</span>
+                    <span class="tag">Splines</span>
+                    <span class="tag">Grid Placement</span>
+                    <span class="tag">Collision Math</span>
                 </div>
             </div>
+
+            <!-- Skill Card 4: Multiplayer, Optimization & Tooling -->
             <div class="skill-card reveal">
-                <i class='bx bx-git-branch'></i>
-                <h3>Tools & Workflow</h3>
-                <p>Git (basic usage)</p>
-                <p>Visual Studio / Rider</p>
-                <p>Basic UI (UMG / Unity UI)</p>
-                <div class="tag-container">
-                    <span class="tag">Version Control</span>
-                    <span class="tag">Debugging</span>
-                    <span class="tag">Workflow</span>
+                <div class="skill-icon-wrapper">
+                    <i class='bx bx-wrench'></i>
                 </div>
+                <h3>Multiplayer, Optimization & Tooling</h3>
+                <ul class="skill-list">
+                    <li><strong>Multiplayer Networking:</strong> Client-Server RPCs, Actor Replication, Network Relevancy, and reliable state replication.</li>
+                    <li><strong>Profiling & Optimization:</strong> Performance profiling with Unreal Insights, Stat commands, and memory leak resolution.</li>
+                    <li><strong>Version Control & Tools:</strong> Git, Git LFS, Perforce/Helix Core, JetBrains Rider, and Visual Studio 2022.</li>
+                    <li><strong>Unreal Build Tool:</strong> Modular Target and Build.cs configurations, plugin structures, and engine compile targets.</li>
+                </ul>
+                <div class="tag-container">
+                    <span class="tag">Multiplayer RPCs</span>
+                    <span class="tag">Unreal Insights</span>
+                    <span class="tag">Memory Profiling</span>
+                    <span class="tag">Perforce / Git</span>
+                    <span class="tag">Rider</span>
+                    <span class="tag">VS2022</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Foundation / Education Card -->
+        <div class="education-banner reveal">
+            <div class="edu-content">
+                <div class="edu-icon-wrapper">
+                    <i class='bx bxs-graduation'></i>
+                </div>
+                <div class="edu-text">
+                    <span class="edu-tag">// ACADEMIC FOUNDATION</span>
+                    <h3 class="edu-title">Bachelor of Science in Game Design and Development</h3>
+                    <p class="edu-meta">IIFA Lancaster Degree College, Bangalore • <strong>Expected Completion: July 2027</strong></p>
+                </div>
+            </div>
+            <div class="edu-status-badge">
+                <i class='bx bx-time-five'></i> In Progress (2024 – 2027)
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="section-header">
+            <span class="section-tag">// PORTFOLIO WORK</span>
+            <h2 class="heading">Featured <span>Projects</span></h2>
+            <p class="section-subtitle">
+                Production-ready prototypes and systems exploring multiplayer networking, combat architectures, and responsive mechanics.
+            </p>
+        </div>
         
         <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">ALL</button>
-            <button class="filter-btn" data-filter="unreal">UNREAL (C++)</button>
+            <button class="filter-btn active" data-filter="all">ALL PROJECTS</button>
+            <button class="filter-btn" data-filter="unreal">UNREAL ENGINE (C++)</button>
             <button class="filter-btn" data-filter="unity">UNITY (C#)</button>
         </div>
 
@@ -124,10 +561,15 @@
                         src="https://player.vimeo.com/video/1189062498?background=1&loop=1"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen
+                        title="Prop Hunt Showcase">
                     </iframe>
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unreal">UNREAL ENGINE 5</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 30 Days</span>
+                    </div>
                     <h3 class="card-title">PROP HUNT (HOT POTATO)</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
@@ -135,29 +577,22 @@
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">UE5 | C++ | Multiplayer Networking</span>
+                        <span class="card-value">UE5 | C++ | Multiplayer Networking | RPCs</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Gameplay Systems Engineer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">30 Days</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">Multiplayer</span>
-                            <span class="tag">UE5</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Systems</span>
-                            <span class="tag">Networking</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Multiplayer</span>
+                        <span class="tag">UE5</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Replication</span>
+                        <span class="tag">Networking</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unreal/prop-hunt-hot-potato.html" class="read-more-btn">READ MORE</a>
-                        <a href="https://github.com/vamsi230" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
+                        <a href="projects/Unreal/prop-hunt-hot-potato.html" class="read-more-btn">READ BREAKDOWN</a>
+                        <a href="https://github.com/vamsi230/HotProp.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
             </div>
@@ -168,37 +603,36 @@
                         src="https://player.vimeo.com/video/1175940996?autoplay=1&muted=1&loop=1&background=1"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen
+                        title="Void Hunter Showcase">
                     </iframe>
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unreal">UNREAL ENGINE 5</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 20 Days</span>
+                    </div>
                     <h3 class="card-title">VOID HUNTER</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">Modular Melee Combat Systems & Data-Driven Wave Architectures</span>
+                        <span class="card-value">Modular Melee Combat Systems, Interface-Driven Architecture, & Data-Driven Wave Loops in UE5.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">UE5.7 | C++ | AI Systems</span>
+                        <span class="card-value">UE5.7 | C++ | Behavior Trees | Interfaces</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Gameplay Systems Engineer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">20 Days</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">Melee Combat</span>
-                            <span class="tag">Systems</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">AI Behavior Trees</span>
+                        <span class="tag">Melee Combat</span>
+                        <span class="tag">VHAbilityBase</span>
+                        <span class="tag">C++ Structs</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unreal/void-hunter.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unreal/void-hunter.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/Void.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -207,36 +641,33 @@
             <!-- UNITY PROJECTS -->
             <div class="project-card reveal" data-category="unity">
                 <div class="card-img">
-                    <img src="gifs/GameJamWaveSpawner.gif" alt="Serpent Shift">
+                    <img src="gifs/GameJamWaveSpawner.gif" alt="Serpent Shift Gameplay">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 3 Days (Game Jam)</span>
+                    </div>
                     <h3 class="card-title">SERPENT SHIFT</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">2D Survival with Dynamic Ranged/Melee Combat Shifts</span>
+                        <span class="card-value">2D Survival game with dynamic Ranged/Melee combat stance shifts and scalable enemy wave spawner.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | 2D Survival</span>
+                        <span class="card-value">Unity | C# | 2D Survival Mechanics</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Solo Developer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Day</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">Combat Systems</span>
-                            <span class="tag">Waves</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Combat Stances</span>
+                        <span class="tag">Wave Spawner</span>
+                        <span class="tag">Game Feel</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/serpent-shift.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/serpent-shift.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/SerpentShift.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -244,36 +675,33 @@
 
             <div class="project-card reveal" data-category="unity">
                 <div class="card-img">
-                    <img src="gifs/DarkDeception.gif" alt="Spectral Maze">
+                    <img src="gifs/DarkDeception.gif" alt="Spectral Maze Prototype">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 1 Week</span>
+                    </div>
                     <h3 class="card-title">SPECTRAL MAZE</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">AI Chase Horror Prototype with Token Collection Loop</span>
+                        <span class="card-value">First-person AI chase horror prototype with NavMesh tracking, line-of-sight detection, and token collection loops.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | AI & Mechanics</span>
+                        <span class="card-value">Unity | C# | NavMesh AI | Stealth Rules</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Gameplay Programmer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Week</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">Game Rules</span>
-                            <span class="tag">Mechanics</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">NavMesh AI</span>
+                        <span class="tag">Chase Logic</span>
+                        <span class="tag">Horror Mechanics</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/spectral-maze.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/spectral-maze.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/SpectralMaze.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -281,36 +709,33 @@
 
             <div class="project-card reveal" data-category="unity">
                 <div class="card-img">
-                    <img src="gifs/2dObstacleDodger.gif" alt="Slide & Dodge">
+                    <img src="gifs/2dObstacleDodger.gif" alt="Slide and Dodge Game">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 1 Day</span>
+                    </div>
                     <h3 class="card-title">SLIDE & DODGE</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">Minimalist 2D Mobile Obstacle Dodger with Physics-Based Challenge</span>
+                        <span class="card-value">Minimalist 2D mobile obstacle dodger focusing on physics responsiveness, touch gesture inputs, and high-score loops.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | Mobile Mechanics</span>
+                        <span class="card-value">Unity | C# | Mobile Touch | 2D Physics</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Solo Developer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Day</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">Mobile</span>
-                            <span class="tag">Input</span>
-                            <span class="tag">Physics</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Mobile Input</span>
+                        <span class="tag">Physics 2D</span>
+                        <span class="tag">Game Loops</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/slide-dodge.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/slide-dodge.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/ObstacleDodger.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -321,33 +746,30 @@
                     <img src="gifs/BreakOut.gif" alt="Block Breaker Reimagined">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 1 Day</span>
+                    </div>
                     <h3 class="card-title">BLOCK BREAKER REIMAGINED</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">Modernized Breakout Arcade Experience with Persistent Save System</span>
+                        <span class="card-value">Modernized Breakout arcade experience with dynamic ball trajectory prediction and JSON persistent save system.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | Arcade Physics</span>
+                        <span class="card-value">Unity | C# | Arcade Physics | JSON Saves</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Solo Developer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Day</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">Physics</span>
-                            <span class="tag">Save Systems</span>
-                            <span class="tag">UI</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Arcade Physics</span>
+                        <span class="tag">JSON Save/Load</span>
+                        <span class="tag">UI Logic</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/block-breaker-reimagined.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/block-breaker-reimagined.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/Block-Breaker.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -355,36 +777,33 @@
 
             <div class="project-card reveal" data-category="unity">
                 <div class="card-img">
-                    <img src="gifs/SpaceInvaders.gif" alt="Galactic Defender">
+                    <img src="gifs/SpaceInvaders.gif" alt="Galactic Defender Game">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 1 Day</span>
+                    </div>
                     <h3 class="card-title">GALACTIC DEFENDER</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">Classic Space-Invaders Style Shooter with Escalating Waves</span>
+                        <span class="card-value">Classic Space Invaders shooter featuring coordinated grid-movement formation logic and escalating projectile waves.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | Arcade Systems</span>
+                        <span class="card-value">Unity | C# | Formation Logic | Pooler</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Solo Developer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Day</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">Patterns</span>
-                            <span class="tag">Logic</span>
-                            <span class="tag">Systems</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Grid Movement</span>
+                        <span class="tag">Object Pooling</span>
+                        <span class="tag">Arcade</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/galactic-defender.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/galactic-defender.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/Galactic-Defender.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -392,36 +811,33 @@
 
             <div class="project-card reveal" data-category="unity">
                 <div class="card-img">
-                    <img src="gifs/PongGame.gif" alt="Pong Rewired">
+                    <img src="gifs/PongGame.gif" alt="Pong Rewired Game">
                 </div>
                 <div class="card-content">
+                    <div class="card-top-meta">
+                        <span class="card-badge unity">UNITY</span>
+                        <span class="card-timeline"><i class='bx bx-time'></i> 1 Day</span>
+                    </div>
                     <h3 class="card-title">PONG REWIRED</h3>
                     <div class="card-info">
                         <span class="card-label">Overview:</span>
-                        <span class="card-value">Classic Pong Remake with AI Opponent & Dual Play Modes</span>
+                        <span class="card-value">Pong reimagined with dynamic AI paddle difficulty tracking, trajectory anticipation, and local dual-player modes.</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Tech Stack:</span>
-                        <span class="card-value">Unity | C# | AI & UI</span>
+                        <span class="card-value">Unity | C# | Predictive AI | UI State</span>
                     </div>
                     <div class="card-info">
                         <span class="card-label">Role:</span>
                         <span class="card-value">Solo Developer</span>
                     </div>
-                    <div class="card-info">
-                        <span class="card-label">Timeline:</span>
-                        <span class="card-value">1 Day</span>
-                    </div>
-                    <div class="card-info">
-                        <span class="card-label">Skills:</span>
-                        <div class="card-tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">UI/UX</span>
-                            <span class="tag">Logic</span>
-                        </div>
+                    <div class="card-tags">
+                        <span class="tag">Predictive AI</span>
+                        <span class="tag">Paddle Physics</span>
+                        <span class="tag">Game States</span>
                     </div>
                     <div class="card-btn-group">
-                        <a href="projects/Unity/pong-rewired.html" class="read-more-btn">READ MORE</a>
+                        <a href="projects/Unity/pong-rewired.html" class="read-more-btn">READ BREAKDOWN</a>
                         <a href="https://github.com/vamsi230/Pong-Rewired.git" target="_blank" class="repo-btn">VIEW REPO <i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -429,39 +845,168 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (Clean & Professional) -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form id="contact-form">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="subject" placeholder="Subject">
-                    <input type="text" name="phone" placeholder="Phone (Optional)">
+        <div class="section-header">
+            <span class="section-tag">// GET IN TOUCH</span>
+            <h2 class="heading">Contact <span>Me</span></h2>
+            <p class="section-subtitle">
+                Have a project, role, or opportunity in mind? Feel free to reach out directly or send a message below.
+            </p>
+        </div>
+
+        <div class="contact-hub-wrapper">
+            <!-- Left Column: Direct Info Cards -->
+            <div class="contact-info-panel reveal">
+                <div class="contact-cards-list">
+                    <!-- Email Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+                        <div class="contact-details">
+                            <span class="contact-type">DIRECT EMAIL</span>
+                            <a href="mailto:veerendra.dharmavarapu@gmail.com" class="contact-val">veerendra.dharmavarapu@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" data-copy="veerendra.dharmavarapu@gmail.com" title="Copy Email">
+                            <i class='bx bx-copy'></i>
+                        </button>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class='bx bx-phone-call'></i></div>
+                        <div class="contact-details">
+                            <span class="contact-type">PHONE / WHATSAPP</span>
+                            <a href="tel:+919182696796" class="contact-val">+91 9182696796</a>
+                        </div>
+                        <button class="copy-btn" data-copy="+919182696796" title="Copy Phone Number">
+                            <i class='bx bx-copy'></i>
+                        </button>
+                    </div>
+
+                    <!-- LinkedIn Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class='bx bxl-linkedin-square'></i></div>
+                        <div class="contact-details">
+                            <span class="contact-type">LINKEDIN</span>
+                            <a href="https://linkedin.com/in/vamsi230" target="_blank" class="contact-val">linkedin.com/in/vamsi230</a>
+                        </div>
+                        <a href="https://linkedin.com/in/vamsi230" target="_blank" class="external-link-btn" title="Open LinkedIn">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+
+                    <!-- GitHub Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class='bx bxl-github'></i></div>
+                        <div class="contact-details">
+                            <span class="contact-type">GITHUB PROFILE</span>
+                            <a href="https://github.com/vamsi230" target="_blank" class="contact-val">github.com/vamsi230</a>
+                        </div>
+                        <a href="https://github.com/vamsi230" target="_blank" class="external-link-btn" title="Open GitHub">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class='bx bx-map'></i></div>
+                        <div class="contact-details">
+                            <span class="contact-type">LOCATION</span>
+                            <span class="contact-val">Bengaluru, Karnataka, India (Open to Remote / Relocation)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="message-box">
-                <textarea name="message" placeholder="Your Message..." cols="30" rows="10" required></textarea>
-                <button type="submit" class="btn">SEND MESSAGE</button>
+
+            <!-- Right Column: Professional Contact Form -->
+            <div class="contact-form-panel reveal">
+                <div class="form-header">
+                    <h3><i class='bx bx-envelope'></i> Send a Message</h3>
+                    <p>Feel free to reach out directly or send a message below.</p>
+                </div>
+
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="form-name"><i class='bx bx-user'></i> Your Name</label>
+                            <input type="text" id="form-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email"><i class='bx bx-envelope'></i> Your Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="form-subject"><i class='bx bx-tag-alt'></i> Subject</label>
+                            <input type="text" id="form-subject" name="subject" placeholder="Subject of your message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone"><i class='bx bx-phone'></i> Phone (Optional)</label>
+                            <input type="text" id="form-phone" name="phone" placeholder="Phone number (optional)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-message"><i class='bx bx-message-detail'></i> Your Message</label>
+                        <textarea id="form-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn submit-btn" id="submit-btn">
+                            <i class='bx bx-paper-plane'></i> SEND MESSAGE
+                        </button>
+                        <a href="mailto:veerendra.dharmavarapu@gmail.com" class="btn btn-outline quick-mail-btn">
+                            <i class='bx bx-envelope-open'></i> OPEN IN EMAIL CLIENT
+                        </a>
+                    </div>
+                </form>
+
+                <div class="form-feedback" id="form-feedback"></div>
             </div>
-        </form>
+        </div>
     </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class='bx bx-check-circle toast-icon'></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/vamsi-dharmavarapu-083515216" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-            <a href="https://github.com/vamsi230" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="https://x.com/Vamsi_1193" target="_blank"><i class='bx bxl-twitter'></i></a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo">VAMSI<span>.DEV</span></a>
+                <p>Game Programmer specializing in Unreal Engine 5 (C++), Modular Systems Architecture, and Performance Simulation.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navigation</h5>
+                <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="Resume/Resume.html">Resume</a>
+            </div>
+            <div class="footer-socials">
+                <h5>Connect</h5>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/vamsi230" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/vamsi230" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:veerendra.dharmavarapu@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                    <a href="https://x.com/Vamsi_1193" target="_blank" title="Twitter"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
         </div>
-        <p class="copyright">© 2026 VAMSI DHARMAVARAPU | DESIGNED FOR PERFORMANCE</p>
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 VAMSI DHARMAVARAPU • CRAFTED FOR GAME ENGINE PERFORMANCE</p>
+            <a href="#home" class="back-to-top" title="Back to Top"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
