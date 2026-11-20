@@ -31,6 +31,15 @@ body {
     padding: 20px 15px;
 }
 
+p,
+.resume-section p,
+.experience-bullets li,
+.project-details li {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
 .resume-container {
     max-width: 1040px;
     margin: 20px auto 50px;
@@ -219,7 +228,8 @@ body {
     margin-top: 3px;
 }
 
-.unpaid-badge {
+.concurrent-badge,
+.intern-badge {
     font-size: 0.75rem;
     color: #38bdf8;
     background: rgba(56, 189, 248, 0.1);
@@ -231,6 +241,22 @@ body {
     margin-left: 6px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.dropout-badge {
+    font-size: 0.72rem;
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .exp-meta {

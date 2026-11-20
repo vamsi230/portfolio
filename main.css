@@ -43,6 +43,44 @@ body {
     position: relative;
 }
 
+/* Hero paragraph clean multiline justification */
+.home-content p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
+/* Ensure all cards, skills lists, project overviews and bullets have crisp, natural left alignment */
+.skill-card,
+.skill-list,
+.skill-list li,
+.direction-content p,
+.education-banner p,
+.project-card,
+.project-card p,
+.card-content,
+.card-info,
+.card-info .card-value,
+.flagship-case-study,
+.flagship-case-study p,
+.flagship-system-item p,
+.nda-notice-content p,
+.practice-projects-container,
+.practice-projects-container p,
+.compact-systems-list span {
+    text-align: left;
+    text-justify: auto;
+    text-align-last: left;
+}
+
+/* Ensure all section headers (tags, headings, subtitles) are consistently centered */
+.section-header,
+.section-header .section-tag,
+.section-header .heading,
+.section-header .section-subtitle {
+    text-align: center !important;
+}
+
 /* Subtle background cyber grid */
 body::before {
     content: '';
@@ -340,7 +378,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-bottom: 3rem;
-    max-width: 66rem;
+    max-width: 76rem;
 }
 
 .stat-card {
@@ -350,6 +388,11 @@ section {
     border-radius: var(--radius-sm);
     text-align: center;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 8.8rem;
 }
 
 .stat-card:hover {
@@ -921,6 +964,31 @@ section {
     color: var(--text-muted);
 }
 
+.nda-inline-note {
+    margin-top: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(0, 242, 242, 0.04);
+    border: 1px solid rgba(0, 242, 242, 0.2);
+    border-radius: var(--radius-sm);
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    line-height: 1.5;
+}
+
+.nda-inline-note i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.nda-inline-note strong {
+    color: #e2e8f0;
+}
+
 /* Compact Systems List */
 .compact-systems-list {
     list-style: none;
@@ -1286,6 +1354,54 @@ section {
     margin-bottom: 0.4rem;
 }
 
+.edu-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+.edu-cgpa-badge {
+    background: rgba(0, 242, 242, 0.12);
+    border: 1px solid rgba(0, 242, 242, 0.35);
+    color: var(--main-color);
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+}
+
+.edu-prior {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.edu-prior strong {
+    color: #e2e8f0;
+}
+
+.dropout-badge {
+    font-size: 1.05rem;
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.12);
+    border: 1px solid rgba(248, 113, 113, 0.35);
+    padding: 0.15rem 0.7rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .edu-title {
     font-size: 1.85rem;
     color: #ffffff;
@@ -1363,6 +1479,231 @@ section {
     color: var(--main-color);
     background: rgba(0, 242, 242, 0.08);
     box-shadow: 0 0 15px rgba(0, 242, 242, 0.15);
+}
+
+/* =========================================================
+   FLAGSHIP CASE STUDY: LORD OF KENSAI
+   ========================================================= */
+.flagship-case-study {
+    background: linear-gradient(145deg, #0e1422 0%, #060911 100%);
+    border: 1px solid rgba(0, 242, 242, 0.35);
+    border-radius: var(--radius-lg);
+    padding: 3.4rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 242, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.flagship-case-study:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 35px var(--accent-glow);
+}
+
+.flagship-case-study::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--main-color), var(--secondary-color));
+}
+
+.flagship-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.flagship-badges {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-badge.status {
+    background: rgba(0, 242, 242, 0.08);
+    color: var(--main-color);
+    border: 1px solid rgba(0, 242, 242, 0.25);
+}
+
+.card-badge.practice {
+    background: rgba(148, 163, 184, 0.12);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.flagship-heading-wrap {
+    margin-bottom: 2rem;
+}
+
+.flagship-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.6rem;
+}
+
+.flagship-subtitle {
+    font-size: 1.45rem;
+    color: var(--text-muted);
+}
+
+.nda-notice-box {
+    background: rgba(0, 242, 242, 0.04);
+    border: 1px solid rgba(0, 242, 242, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 1.6rem 2rem;
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+
+.nda-notice-box i {
+    color: var(--main-color);
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.nda-notice-content h5 {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--main-color);
+    letter-spacing: 0.8px;
+    margin-bottom: 0.5rem;
+}
+
+.nda-notice-content p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.nda-notice-content em {
+    color: #fff;
+    font-style: normal;
+}
+
+.flagship-systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 2.8rem;
+}
+
+.flagship-system-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 1.8rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.flagship-system-item:hover {
+    background: rgba(0, 242, 242, 0.04);
+    border-color: rgba(0, 242, 242, 0.3);
+    transform: translateY(-2px);
+}
+
+.flagship-system-item h6 {
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    color: #f1f5f9;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.flagship-system-item h6 i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+.flagship-system-item p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.flagship-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 2rem;
+}
+
+.flagship-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.flagship-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   PRACTICE PROJECTS CONTAINER
+   ========================================================= */
+.practice-projects-container {
+    margin-top: 5rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--card-border);
+}
+
+.practice-header {
+    margin-bottom: 3rem;
+}
+
+.practice-title-wrap {
+    margin-bottom: 0.6rem;
+}
+
+.practice-heading {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.practice-desc {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    max-width: 750px;
+    line-height: 1.6;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2.5rem;
+}
+
+.practice-card .card-content {
+    padding: 2.2rem;
+    gap: 1.2rem;
+}
+
+.practice-card .card-title {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 .project-grid {

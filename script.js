@@ -236,8 +236,10 @@ if (sliderTrack) {
 // ==========================================
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
+const flagshipCaseStudy = document.querySelector('.flagship-case-study');
+const practiceContainer = document.querySelector('.practice-projects-container');
 
-if (filterButtons.length > 0 && projectCards.length > 0) {
+if (filterButtons.length > 0) {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -245,10 +247,52 @@ if (filterButtons.length > 0 && projectCards.length > 0) {
 
             const filterValue = button.getAttribute('data-filter');
 
+            // Handle Flagship Case Study
+            if (flagshipCaseStudy) {
+                if (filterValue === 'all' || filterValue === 'unreal') {
+                    flagshipCaseStudy.style.display = 'block';
+                    setTimeout(() => flagshipCaseStudy.classList.add('active'), 50);
+                } else {
+                    flagshipCaseStudy.style.display = 'none';
+                    flagshipCaseStudy.classList.remove('active');
+                }
+            }
+
+            // Handle Practice Section Container
+            if (practiceContainer) {
+                if (filterValue === 'all' || filterValue === 'practice') {
+                    practiceContainer.style.display = 'block';
+                    setTimeout(() => practiceContainer.classList.add('active'), 50);
+                } else {
+                    practiceContainer.style.display = 'none';
+                    practiceContainer.classList.remove('active');
+                }
+            }
+
+            // Handle Individual Project Cards
             projectCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                const category = card.getAttribute('data-category');
+                const isPractice = card.classList.contains('practice-card');
+
+                if (filterValue === 'all') {
                     card.style.display = 'flex';
                     setTimeout(() => card.classList.add('active'), 50);
+                } else if (filterValue === 'practice') {
+                    if (isPractice) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.classList.add('active'), 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('active');
+                    }
+                } else if (category === filterValue) {
+                    if (!isPractice) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.classList.add('active'), 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('active');
+                    }
                 } else {
                     card.style.display = 'none';
                     card.classList.remove('active');
