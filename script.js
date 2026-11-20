@@ -28,7 +28,7 @@ if (typedElement) {
         'Gameplay Systems Engineer',
         'Unreal Engine 5 (C++) Developer',
         'Multiplayer & Systems Programmer',
-        'AI & Gameplay Architect'
+        'AI & Gameplay Programmer'
     ];
 
     let titleIndex = 0;
@@ -434,7 +434,7 @@ if (contactForm) {
         }
 
         // Construct a direct mailto URL
-        const mailRecipient = 'veerendra.dharmavarapu@gmail.com';
+        const mailRecipient = 'vamsidharmavarapu1904@gmail.com';
         const mailSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject} - from ${name}`);
         const mailBody = encodeURIComponent(
             `Hi Vamsi,\n\n${message}\n\n---\nSender Details:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`

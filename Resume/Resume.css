@@ -259,6 +259,35 @@ p,
     letter-spacing: 0.5px;
 }
 
+.cgpa-badge {
+    font-size: 0.75rem;
+    color: var(--cyan);
+    background: rgba(0, 242, 242, 0.1);
+    border: 1px solid rgba(0, 242, 242, 0.3);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.practice-projects-note {
+    margin-top: 1.4rem;
+    padding: 0.9rem 1.4rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.practice-projects-note strong {
+    color: var(--cyan);
+}
+
 .exp-meta {
     text-align: right;
     font-family: var(--font-mono);
